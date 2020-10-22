@@ -57,11 +57,11 @@ int main(int argc, char** argv) {
 			{
 				fprintf(stdout, "%lld ", input_value);
 			}
-			else if (to_count == 1 && input_value >= to_value)
+			if (to_count == 1 && input_value >= to_value)
 			{
 				fprintf(stderr, "%lld ", input_value);
 			}
-			else
+			if
 			{
 				input[input_count] = input_value;
 				input_check[input_count] = input_value;
