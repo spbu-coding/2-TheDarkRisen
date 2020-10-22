@@ -7,7 +7,7 @@
 #define FROM_STR "--from="
 #define TO_STR "--to="
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
 		if (argc < 2)
 		{
 			return -1;
@@ -43,6 +43,7 @@ int main(int argc, char** argv) {
 		long long input[MAX_NUMBERS_SIZE];
 		long long input_check[MAX_NUMBERS_SIZE];
 		int input_count = 0;
+	        int usecheck = 0;
 		for (int k = 0; k < MAX_NUMBERS_SIZE; k++) {
 
 			long long input_value;
@@ -56,12 +57,14 @@ int main(int argc, char** argv) {
 			if (from_count == 1 && input_value <= from_value)
 			{
 				fprintf(stdout, "%lld ", input_value);
+				usecheck++;
 			}
 			if (to_count == 1 && input_value >= to_value)
 			{
 				fprintf(stderr, "%lld ", input_value);
+				usecheck++;
 			}
-			if
+			if (!usecheck) 
 			{
 				input[input_count] = input_value;
 				input_check[input_count] = input_value;
