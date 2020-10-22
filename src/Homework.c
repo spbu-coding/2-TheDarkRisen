@@ -43,9 +43,9 @@ int main(int argc, char **argv) {
 		long long input[MAX_NUMBERS_SIZE];
 		long long input_check[MAX_NUMBERS_SIZE];
 		int input_count = 0;
-	        int usecheck = 0;
 		for (int k = 0; k < MAX_NUMBERS_SIZE; k++) {
 
+			int usecheck = 0;
 			long long input_value;
 			char space;
 
